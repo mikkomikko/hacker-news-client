@@ -1,0 +1,16 @@
+@layer components {
+  .pagination-container {
+    container-type: inline-size;
+    margin-bottom: var(--space-xl);
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  @container (max-width: 40ch) {
+    .pagination-nav__label {
+      display: none;
+    }
+  }
+}

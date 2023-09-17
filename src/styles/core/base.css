@@ -1,0 +1,103 @@
+:root {
+  --color-gray-100: #f6f8fa;
+  --color-gray-200: #eaeef2;
+  --color-gray-300: #d0d7de;
+  --color-gray-400: #afb8c1;
+  --color-gray-500: #8a939d;
+  --color-gray-600: #646c75;
+  --color-gray-700: #404953;
+  --color-gray-800: #232b34;
+  --color-gray-900: #0e161d;
+
+  --color-primary-100: #fbefff;
+  --color-primary-200: #e8d0ff;
+  --color-primary-300: #cb9dff;
+  --color-primary-400: #9738fd;
+  --color-primary-500: #6d0ec7;
+  --color-primary-600: #3a0e75;
+
+  /* Outline styles */
+  --outline-width: 3px;
+  --outline-style: solid;
+  --outline-color: var(--color-gray-700);
+  --outline-offset: 4px;
+
+  --space-3xs: clamp(0.31rem, calc(0.31rem + 0vw), 0.31rem);
+  --space-2xs: clamp(0.56rem, calc(0.51rem + 0.24vw), 0.69rem);
+  --space-xs: clamp(0.88rem, calc(0.83rem + 0.24vw), 1rem);
+  --space-s: clamp(1.13rem, calc(1.05rem + 0.37vw), 1.31rem);
+  --space-m: clamp(1.69rem, calc(1.57rem + 0.61vw), 2rem);
+  --space-l: clamp(2.25rem, calc(2.1rem + 0.73vw), 2.63rem);
+  --space-xl: clamp(3.38rem, calc(3.16rem + 1.1vw), 3.94rem);
+  --space-2xl: clamp(4.5rem, calc(4.21rem + 1.46vw), 5.25rem);
+  --space-3xl: clamp(6.75rem, calc(6.31rem + 2.2vw), 7.88rem);
+
+  --step--3: clamp(0.65rem, calc(0.61rem + 0.21vw), 0.76rem);
+  --step--2: clamp(0.78rem, calc(0.73rem + 0.25vw), 0.91rem);
+  --step--1: clamp(0.94rem, calc(0.88rem + 0.3vw), 1.09rem);
+  --step-0: clamp(1.13rem, calc(1.05rem + 0.37vw), 1.31rem);
+  --step-1: clamp(1.35rem, calc(1.26rem + 0.44vw), 1.58rem);
+  --step-2: clamp(1.62rem, calc(1.51rem + 0.53vw), 1.89rem);
+  --step-3: clamp(1.94rem, calc(1.82rem + 0.63vw), 2.27rem);
+  --step-4: clamp(2.33rem, calc(2.18rem + 0.76vw), 2.72rem);
+  --step-5: clamp(2.8rem, calc(2.62rem + 0.91vw), 3.27rem);
+
+  --box-shadow-xs: 0 1px 2px hsla(0, 0%, 0%, 0.02),
+    0 1px 1px hsla(0, 0%, 0%, 0.04);
+  --box-shadow-s: 0 2px 4px hsla(0, 0%, 0%, 0.09),
+    0 1px 2px hsla(0, 0%, 0%, 0.06);
+  --box-shadow-m: 0 5px 8px hsla(0, 0%, 0%, 0.12),
+    0 2px 3px hsla(0, 0%, 0%, 0.08);
+  --box-shadow-l: 0 10px 20px hsla(0, 0%, 0%, 0.15),
+    0 3px 6px hsla(0, 0%, 0%, 0.08);
+}
+
+@layer global {
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-gray-100);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Baseline for default links */
+  a:not([class]) {
+    /* Relatively sized thickness and offset */
+    text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+  }
+
+  :focus-visible {
+    --outline-size: max(2px, 0.15em);
+
+    outline: var(--outline-width, var(--outline-size))
+      var(--outline-style, solid) var(--outline-color, currentColor);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
+
+  /* Scroll padding allowance above anchor links */
+  :target {
+    scroll-padding-block-start: 2rem;
+  }
+
+  /* Scroll padding allowance below focused elements 
+to ensure they are clearly in view */
+  :focus {
+    scroll-padding-block-end: 8vh;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-gray-300);
+    margin: var(--space-xl) 0;
+  }
+}

@@ -1,0 +1,7 @@
+@layer layout {
+  .wrapper {
+    max-width: 75ch;
+    margin: 0 auto;
+    padding: 0 var(--space-s);
+  }
+}
