@@ -41,6 +41,7 @@
   .news-list-item__title a {
     color: var(--color-gray-900);
     text-decoration: none;
+    overflow-wrap: anywhere;
   }
 
   .news-list-item__title a:hover {
