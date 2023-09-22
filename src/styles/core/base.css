@@ -76,6 +76,15 @@
     text-underline-offset: 0.15em;
   }
 
+  .link--reset {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .link--reset:hover {
+    text-decoration: underline;
+  }
+
   :focus-visible {
     --outline-size: max(2px, 0.15em);
 
