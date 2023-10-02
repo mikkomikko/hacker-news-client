@@ -20,7 +20,7 @@ export default function NewsDetailsPage() {
   return (
     <div className="u-bg-white ph-m pv-l">
       <div className="mb-s">
-        <Link to={previousPath}>Back to news</Link>
+        <Link to={previousPath}>← Back to news</Link>
       </div>
       {isLoading && <NewsListItemLoader />}
       {storyData && <NewsDetails story={storyData} />}

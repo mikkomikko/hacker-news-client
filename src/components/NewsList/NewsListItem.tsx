@@ -27,7 +27,7 @@ export default function NewListItem({ storyId, index }: Props) {
         <>
           <div className="news-list-item__index">{`${index}.`}</div>
           <div>
-            <h2 className="news-list-item__title f-step--1 f-semi-bold">
+            <h2 className="news-list-item__title f-step-0 f-semi-bold">
               <Link state={location} to={`/item/${storyData.id}`}>
                 {storyData.title}
               </Link>
@@ -36,7 +36,7 @@ export default function NewListItem({ storyId, index }: Props) {
           </div>
           <div>
             <a
-              className="button button--secondary"
+              className="button button--secondary news-list-item__link"
               href={storyData.url}
               title={storyData.url}
               target="_blank"

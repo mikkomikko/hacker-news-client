@@ -10,7 +10,7 @@ export default function NewsDetails({ story }: Props) {
   return (
     <div>
       <h1 className="f-step-3">{story.title}</h1>
-      <div className="mb-s">
+      <div className="mb-s u-container-inline">
         <NewsListItemMeta story={story} />
       </div>
       <a href={story.url} target="_blank">
